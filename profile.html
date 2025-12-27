@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Profile - Student Portal</title>
+    <link rel="stylesheet" href="project.css" />
+</head>
+<body>
+    <header class="site-header">
+        <div class="logo">🌟 Student Portal</div>
+        <nav class="top-nav">
+            <a href="project.html" class="nav-link">Home</a>
+            <a href="record.html" class="nav-link">Achievements</a>
+            <a href="progress.html" class="nav-link">Progress</a>
+            <a href="showcase.html" class="nav-link">Showcase</a>
+            <a href="profile.html" class="nav-link active">Profile</a>
+             <link rel="stylesheet" href="project.css">
+            <a href="#" class="nav-link" id="logout-btn">Logout</a>
+        </nav>
+    </header>
+
+    <main class="page-wrap">
+        <section class="panel">
+            <h1>👤 My Profile</h1>
+            <p class="muted">Manage your profile information</p>
+
+            <form id="profileForm" class="form-grid">
+                <label>Full Name
+                    <input type="text" id="fullName" placeholder="Your full name" required>
+                </label>
+                <label>Roll Number
+                    <input type="text" id="rollNumber" placeholder="Your roll number">
+                </label>
+                <label>Email
+                    <input type="email" id="email" placeholder="your@email.com">
+                </label>
+                <label class="full">Bio
+                    <textarea id="bio" placeholder="Tell us about yourself..."></textarea>
+                </label>
+
+                <div class="form-actions full">
+                    <button type="submit" class="btn primary">💾 Save Profile</button>
+                    <button type="button" id="resetBtn" class="btn outline">🔄 Reset</button>
+                </div>
+            </form>
+
+            <div id="profilePreview" class="profile-preview"></div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>🔒 Student Portal • Data saved locally • v2.0</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

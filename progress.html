@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Progress - Student Portal</title>
+    <link rel="stylesheet" href="project.css" />
+</head>
+<body>
+    <header class="site-header">
+        <div class="logo">🌟 Student Portal</div>
+        <nav class="top-nav">
+            <a href="project.html" class="nav-link">Home</a>
+            <a href="record.html" class="nav-link">Achievements</a>
+            <a href="progress.html" class="nav-link active">Progress</a>
+            <a href="showcase.html" class="nav-link">Showcase</a>
+            <a href="profile.html" class="nav-link">Profile</a>
+             <link rel="stylesheet" href="project.css">
+            <a href="#" class="nav-link" id="logout-btn">Logout</a>
+        </nav>
+    </header>
+
+    <main class="page-wrap">
+        <section class="panel">
+            <h1>📈 Your Progress</h1>
+            <p class="muted">Track your achievements progress</p>
+
+            <div class="progress-card">
+                <h3>Overall Progress</h3>
+                <div class="progress-bar">
+                    <div id="progressFill" class="progress-fill"></div>
+                </div>
+                <p id="progressPercent" class="muted">0% completed</p>
+            </div>
+
+            <div class="progress-breakdown">
+                <h3>📊 Category Breakdown</h3>
+                <ul id="categoryList" class="list"></ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>🔒 Student Portal • Data saved locally • v2.0</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

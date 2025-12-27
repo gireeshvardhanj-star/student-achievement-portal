@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Achievements - Student Portal</title>
+</head>
+<body>
+    <header id="siteHeader">
+        <div id="logo">🌟 Student Portal</div>
+        <nav id="topNav">
+            <a href="project.html" class="nav-link">Home</a>
+            <a href="record.html" class="nav-link active">Achievements</a>
+            <a href="progress.html" class="nav-link">Progress</a>
+            <a href="showcase.html" class="nav-link">Showcase</a>
+            <a href="profile.html" class="nav-link">Profile</a>
+             <link rel="stylesheet" href="project.css">
+            <a href="#" id="logout-btn" class="nav-link">Logout</a>
+        </nav>
+    </header>
+
+    <main id="mainContent">
+        <section id="recordPanel">
+            <h1>📝 Log Your Achievements</h1>
+            <p id="subtitle">Add all your achievements and track your success</p>
+
+            <form id="achievementForm">
+                <div class="form-group">
+                    <label>Title</label>
+                    <input type="text" id="title" placeholder="e.g., Won Hackathon" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Category</label>
+                    <select id="category" required>
+                        <option value="">Select Category</option>
+                        <option value="Hackathon">🏆 Hackathon</option>
+                        <option value="Project">💻 Project</option>
+                        <option value="Academic">📚 Academic</option>
+                        <option value="Certification">🎓 Certification</option>
+                        <option value="Competition">⚡ Competition</option>
+                        <option value="Internship">💼 Internship</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Date</label>
+                    <input type="date" id="date" required>
+                </div>
+
+                <div class="form-group full">
+                    <label>Description</label>
+                    <textarea id="description" rows="4" placeholder="Describe your achievement..."></textarea>
+                </div>
+
+                <div id="formActions">
+                    <button type="submit" id="saveBtn" class="btn primary">💾 Save</button>
+                    <button type="button" id="clearBtn" class="btn outline">🗑️ Clear All</button>
+                </div>
+            </form>
+
+            <h2>📋 Your Achievements</h2>
+            <ul id="achievementList"></ul>
+        </section>
+    </main>
+
+    <footer id="siteFooter">
+        <p>🔒 Student Portal • Data saved locally • v2.0</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
