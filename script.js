@@ -450,3 +450,64 @@ function showProfilePreview(profile) {
 }
 
 console.log("✅ All functions loaded successfully!");
+
+// ========== AUTO FILL TEAM ==========
+function autoFillTeam() {
+    const teamData = [
+        {
+            name: "Gireeshvardhanj",
+            rollNo: "22XYZ001",
+            email: "gireesh@example.com"
+        },
+        {
+            name: "Team Member 2",
+            rollNo: "22XYZ002",
+            email: "member2@example.com"
+        },
+        {
+            name: "Team Member 3",
+            rollNo: "22XYZ003",
+            email: "member3@example.com"
+        },
+        {
+            name: "Team Member 4",
+            rollNo: "22XYZ004",
+            email: "member4@example.com"
+        }
+    ];
+
+    localStorage.setItem('teamData', JSON.stringify(teamData));
+    
+    teamData.forEach((member, index) => {
+        const memberNum = index + 1;
+        const nameField = document.getElementById(`member${memberNum}Name`) || document.querySelector(`input[name="member${memberNum}Name"]`);
+        const rollField = document.getElementById(`member${memberNum}Roll`) || document.querySelector(`input[name="member${memberNum}Roll"]`);
+        const emailField = document.getElementById(`member${memberNum}Email`) || document.querySelector(`input[name="member${memberNum}Email"]`);
+
+        if (nameField) nameField.value = member.name;
+        if (rollField) rollField.value = member.rollNo;
+        if (emailField) emailField.value = member.email;
+    });
+    
+    console.log('Team auto-filled!', teamData);
+    alert('Team members auto-filled successfully!');
+}
+
+// Auto-load team data on page load
+window.addEventListener('load', () => {
+    const savedTeam = localStorage.getItem('teamData');
+    if (savedTeam) {
+        const teamData = JSON.parse(savedTeam);
+        teamData.forEach((member, index) => {
+            const memberNum = index + 1;
+            const nameField = document.getElementById(`member${memberNum}Name`) || document.querySelector(`input[name="member${memberNum}Name"]`);
+            const rollField = document.getElementById(`member${memberNum}Roll`) || document.querySelector(`input[name="member${memberNum}Roll"]`);
+            const emailField = document.getElementById(`member${memberNum}Email`) || document.querySelector(`input[name="member${memberNum}Email"]`);
+
+            if (nameField) nameField.value = member.name;
+            if (rollField) rollField.value = member.rollNo;
+            if (emailField) emailField.value = member.email;
+        });
+    }
+});
+
